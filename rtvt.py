@@ -7,10 +7,7 @@ import sys
 def create_and_activate_venv():
     try:
         if not os.path.exists('./quick-project-start'):
-            subprocess.run('git clone https://github.com/sergeynikol/quick-project-start.git', shell=True, executable='/bin/bash')
-        # Check if virtual environment already exists
-        # if not os.path.exists('./venv'):
-        #     time.sleep(5)
+            print('THE REPOSITORY YOU SPECIFIED DOES NOT EXIST ON GITHUB')
             subprocess.call(['ls'])
         if os.path.exists('./venv'):
             time.sleep(5)
@@ -26,3 +23,4 @@ def create_and_activate_venv():
 
 if __name__ == "__main__":
     create_and_activate_venv() 
+    
